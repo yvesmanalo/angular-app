@@ -8,8 +8,6 @@ import { ProductListComponent } from './product-list/product-list.component';
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, TopHeaderComponent, ProductListComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
- 
-}
+export class App {}
