@@ -1,6 +1,6 @@
 <div class="ekart-menu">
-  <a href="#">Home</a>
-  <a href="#">Products</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+  @for (menu of mainMenuItems; track menu){
+    <a href="#">{{ menu }}</a>
+  }
+  
 </div>
