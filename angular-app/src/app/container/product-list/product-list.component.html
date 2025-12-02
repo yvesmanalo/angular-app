@@ -6,7 +6,13 @@
 ></app-filter>
 
 <div class="ekart--products--container">
-  @for(prod of products; track prod){ @if(selectedFilterRadioButton === 'all' ||
-  prod.is_in_inventory.toString() === selectedFilterRadioButton){
-  <app-product [product]="prod"></app-product>} }
+  <!-- @if(selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton) {
+      
+    }  -->
+  @for(prod of products; track prod){
+    @if(searchText.toLowerCase() === '' || prod.name.toLowerCase().includes(searchText.toLowerCase())){
+      <app-product [product]="prod"></app-product>
+    }
+    
+  }
 </div>

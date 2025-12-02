@@ -8,9 +8,9 @@
   <button (click)="decrementCartValue()">-</button>
   <span>{{ addToCart }}</span>
   <button (click)="incrementCartValue()">+</button> -->
-  <app-search></app-search>
+  <app-search (searchTextChanged)="setSearchText($event)"></app-search>
   <!-- @for (name of listOfString; track name;){
     <p>Current name is: {{name}}</p>
   } -->
-  <product-list></product-list>
+  <product-list [searchText]="searchText"></product-list>
 </div>
