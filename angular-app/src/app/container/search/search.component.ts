@@ -9,21 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './search.component.css',
 })
 export class SearchComponent {
-  searchText:string = ''
+  searchText: string = '';
 
-  //Search component to Container component
-
-  //1.Create an Event
   @Output()
-  searchTextChanged: EventEmitter<string> = new EventEmitter<string>()
+  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
 
-  //2. Raise event
-  onSearchTextChanged(){
-    this.searchTextChanged.emit(this.searchText)
-  }
-  
-
-  updateSearchText(event:any){
-    this.searchText = event.target.value
+  updateSearchText(inputEl: HTMLInputElement) {
+    this.searchText = inputEl.value;
+    this.searchTextChanged.emit(this.searchText);
   }
 }
