@@ -12,7 +12,7 @@
   <div *ngFor="let prod of products" (click)="selectedProduct = prod">
     <app-product
       [product]="prod"
-      *ngIf="searchText.toLowerCase() === '' || prod.name.toLowerCase().includes(searchText)"
+      *ngIf="searchText.toLowerCase() === '' || prod.name.toLowerCase().includes(searchText.toLowerCase())"
     ></app-product>
   </div>
 </div>
