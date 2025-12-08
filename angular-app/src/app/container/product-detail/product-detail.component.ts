@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { Product } from '../../Models/Product';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'product-detail',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css',
 })
